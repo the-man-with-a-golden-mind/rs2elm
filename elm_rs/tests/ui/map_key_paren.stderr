@@ -1,0 +1,5 @@
+error: map keys that contain a type parameter are not supported; the key must be String
+ --> tests/ui/map_key_paren.rs:7:11
+  |
+7 |     rows: std::collections::HashMap<(String), T>,
+  |           ^^^

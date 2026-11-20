@@ -1,0 +1,25 @@
+error: #[serde(transparent)] requires at least one field that is neither skipped nor has a default
+ --> tests/ui/transparent_skip.rs:5:1
+  |
+5 | / #[serde(transparent)]
+6 | | struct Bad {
+7 | |     #[serde(skip)]
+8 | |     inner: u8,
+9 | | }
+  | |_^
+
+error: #[serde(transparent)] requires at least one field that is not skipped
+ --> tests/ui/transparent_skip.rs:5:1
+  |
+5 | / #[serde(transparent)]
+6 | | struct Bad {
+7 | |     #[serde(skip)]
+8 | |     inner: u8,
+9 | | }
+  | |_^
+
+error: cannot skip the only field of a transparent struct
+ --> tests/ui/transparent_skip.rs:7:5
+  |
+7 |     #[serde(skip)]
+  |     ^

@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.95.0"
+      - name: Install Elm
+        run: |
+          curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+          gunzip elm.gz
+          chmod +x elm
+          sudo mv elm /usr/local/bin/elm
+          elm --version
+      - name: Cache Elm packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.elm
+          key: elm-0.19.1-${{ hashFiles('elm-test/elm.json') }}
+      - name: Test
+        run: cargo test --all-features
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rustfmt
+      - name: Format
+        run: cargo fmt --all -- --check

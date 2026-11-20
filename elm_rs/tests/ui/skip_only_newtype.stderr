@@ -1,0 +1,7 @@
+error: cannot skip the only field of a newtype
+ --> tests/ui/skip_only_newtype.rs:4:34
+  |
+4 | #[derive(Deserialize, Serialize, Elm)]
+  |                                  ^^^
+  |
+  = note: this error originates in the derive macro `Elm` (in Nightly builds, run with -Z macro-backtrace for more info)

@@ -1,0 +1,5 @@
+error: cannot derive ElmQuery for `HashMap < String, i32 >` because this type has no query codec
+ --> tests/ui/query_hashmap.rs:6:12
+  |
+6 |     extra: HashMap<String, i32>,
+  |            ^^^^^^^

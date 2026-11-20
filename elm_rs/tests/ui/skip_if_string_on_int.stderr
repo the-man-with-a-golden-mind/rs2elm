@@ -1,0 +1,23 @@
+error: `String::is_empty` requires a field of type `String`
+ --> tests/ui/skip_if_string_on_int.rs:7:5
+  |
+7 |     value: i32,
+  |     ^^^^^
+
+error[E0308]: mismatched types
+ --> tests/ui/skip_if_string_on_int.rs:4:23
+  |
+4 | #[derive(Deserialize, Serialize, Elm, ElmEncode, ElmDecode)]
+  |                       ^^^^^^^^^ expected `&String`, found `&i32`
+5 | struct Named {
+6 |     #[serde(skip_serializing_if = "String::is_empty")]
+  |                                   ------------------ arguments to this function are incorrect
+  |
+  = note: expected reference `&String`
+             found reference `&i32`
+note: method defined here
+ --> $RUST/alloc/src/string.rs
+  |
+  |     pub const fn is_empty(&self) -> bool {
+  |                  ^^^^^^^^
+  = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)

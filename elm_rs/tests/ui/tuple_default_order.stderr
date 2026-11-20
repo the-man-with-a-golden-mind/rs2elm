@@ -1,0 +1,5 @@
+error: field must have #[serde(default)] because previous field 0 has #[serde(default)]
+ --> tests/ui/tuple_default_order.rs:5:43
+  |
+5 | struct Bad(#[serde(default)] Option<i32>, i32);
+  |                                           ^^^

@@ -1,0 +1,11 @@
+error: #[serde(tag = "...")] cannot be used with tuple variants
+ --> tests/ui/internal_tuple.rs:7:5
+  |
+7 |     T(i32, i32),
+  |     ^^^^^^^^^^^
+
+error: Internally tagged tuple variants are not supported by serde_json
+ --> tests/ui/internal_tuple.rs:7:5
+  |
+7 |     T(i32, i32),
+  |     ^

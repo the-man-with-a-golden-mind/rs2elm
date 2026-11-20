@@ -1,0 +1,5 @@
+error: cannot derive ElmQuery for `Vec < T >` because this type argument contains a type parameter
+  --> tests/ui/query_param_container.rs:10:12
+   |
+10 |     child: Inner<Vec<T>>,
+   |            ^^^^^

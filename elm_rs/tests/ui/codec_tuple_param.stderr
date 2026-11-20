@@ -1,0 +1,5 @@
+error: cannot derive an Elm codec for `(T, i32)` because it contains a type parameter
+ --> tests/ui/codec_tuple_param.rs:5:11
+  |
+5 |     pair: (T, i32),
+  |           ^^^^^^^^

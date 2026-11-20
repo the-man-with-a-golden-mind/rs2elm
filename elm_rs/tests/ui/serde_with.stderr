@@ -1,0 +1,5 @@
+error: unsupported serde attribute
+  --> tests/ui/serde_with.rs:16:13
+   |
+16 |     #[serde(with = "codec")]
+   |             ^^^^

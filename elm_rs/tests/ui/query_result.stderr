@@ -1,0 +1,5 @@
+error: cannot derive ElmQuery for `Result < i32, String >` because this type has no query codec
+ --> tests/ui/query_result.rs:5:14
+  |
+5 |     outcome: Result<i32, String>,
+  |              ^^^^^^

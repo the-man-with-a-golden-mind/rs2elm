@@ -1,0 +1,5 @@
+error: `type` is an Elm keyword. Rename it with #[rs2elm(rename = "...")]
+ --> tests/ui/keyword_renamed.rs:6:5
+  |
+6 |     value: u8,
+  |     ^^^^^

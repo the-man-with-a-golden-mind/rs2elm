@@ -1,0 +1,17 @@
+error: cannot derive Elm for this generic argument
+ --> tests/ui/query_const_arg.rs:9:13
+  |
+9 |     bucket: Bucket<T, 2>,
+  |             ^^^^^^
+
+error: cannot derive an Elm codec for this generic argument
+ --> tests/ui/query_const_arg.rs:9:13
+  |
+9 |     bucket: Bucket<T, 2>,
+  |             ^^^^^^
+
+error: cannot derive ElmQuery for this generic argument
+ --> tests/ui/query_const_arg.rs:9:13
+  |
+9 |     bucket: Bucket<T, 2>,
+  |             ^^^^^^

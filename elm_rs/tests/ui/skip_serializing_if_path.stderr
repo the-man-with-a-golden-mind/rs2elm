@@ -1,0 +1,5 @@
+error: unsupported skip_serializing_if path `skip`
+  --> tests/ui/skip_serializing_if_path.rs:10:35
+   |
+10 |     #[serde(skip_serializing_if = "skip")]
+   |                                   ^^^^^^

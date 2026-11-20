@@ -1,0 +1,11 @@
+error: unknown rename rule `rename_all = "TitleCase"`, expected one of "lowercase", "UPPERCASE", "PascalCase", "camelCase", "snake_case", "SCREAMING_SNAKE_CASE", "kebab-case", "SCREAMING-KEBAB-CASE"
+ --> tests/ui/rename_rule.rs:5:22
+  |
+5 | #[serde(rename_all = "TitleCase")]
+  |                      ^^^^^^^^^^^
+
+error: unsupported serde rename rule `TitleCase`
+ --> tests/ui/rename_rule.rs:5:22
+  |
+5 | #[serde(rename_all = "TitleCase")]
+  |                      ^^^^^^^^^^^

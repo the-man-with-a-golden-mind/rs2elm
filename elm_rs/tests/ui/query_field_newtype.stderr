@@ -1,0 +1,5 @@
+error: only unit variants are allowed
+ --> tests/ui/query_field_newtype.rs:5:5
+  |
+5 |     One(u8),
+  |     ^^^

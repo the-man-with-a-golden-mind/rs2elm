@@ -1,0 +1,32 @@
+[package]
+name = "rs2elm_derive"
+description = "Derive macros for rs2elm"
+readme = "README.md"
+keywords = ["elm", "bindings"]
+categories = ["development-tools::ffi", "web-programming"]
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lib]
+proc-macro = true
+
+[features]
+default = []
+json = []
+query = []
+serde = []
+
+[dependencies]
+heck = "0.5.0"
+proc-macro2 = "1.0.36"
+quote = "1.0.15"
+syn = "2.0.98"
+tracing = { workspace = true }

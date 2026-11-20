@@ -1,0 +1,5 @@
+error: `#[rs2elm(index)]` requires a list
+  --> tests/ui/query_index_applied.rs:10:11
+   |
+10 |     item: Item<T>,
+   |           ^^^^

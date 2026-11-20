@@ -1,0 +1,5 @@
+error: `index` is only valid on a field
+ --> tests/ui/index_on_container.rs:4:10
+  |
+4 | #[rs2elm(index)]
+  |          ^^^^^

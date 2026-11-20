@@ -1,0 +1,11 @@
+error: #[serde(flatten)] cannot be used on newtype structs
+  --> tests/ui/flatten_positional.rs:10:20
+   |
+10 | struct FlatNewtype(#[serde(flatten)] Inner);
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^
+
+error: flatten is only supported on named fields
+  --> tests/ui/flatten_positional.rs:10:20
+   |
+10 | struct FlatNewtype(#[serde(flatten)] Inner);
+   |                    ^

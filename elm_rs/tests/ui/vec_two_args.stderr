@@ -1,0 +1,23 @@
+error: expected one type argument
+ --> tests/ui/vec_two_args.rs:5:12
+  |
+5 |     items: Vec<T, std::alloc::Global>,
+  |            ^^^
+
+error[E0658]: use of unstable library feature `allocator_api`
+ --> tests/ui/vec_two_args.rs:5:19
+  |
+5 |     items: Vec<T, std::alloc::Global>,
+  |                   ^^^^^^^^^^^^^^^^^^
+  |
+  = note: see issue #32838 <https://github.com/rust-lang/rust/issues/32838> for more information
+
+error[E0658]: use of unstable library feature `allocator_api`
+ --> tests/ui/vec_two_args.rs:5:19
+  |
+5 |     items: Vec<T, std::alloc::Global>,
+  |                ---^^^^^^^^^^^^^^^^^^
+  |                |
+  |                help: consider wrapping the inner types in tuple: `(T, std::alloc::Global)`
+  |
+  = note: see issue #32838 <https://github.com/rust-lang/rust/issues/32838> for more information

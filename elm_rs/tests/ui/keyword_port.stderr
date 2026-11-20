@@ -1,0 +1,5 @@
+error: `port` is an Elm keyword. Rename it with #[rs2elm(rename = "...")]
+ --> tests/ui/keyword_port.rs:5:5
+  |
+5 |     port: u8,
+  |     ^^^^

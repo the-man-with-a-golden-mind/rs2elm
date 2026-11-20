@@ -1,0 +1,27 @@
+error: expected two type arguments
+ --> tests/ui/map_one_arg.rs:5:11
+  |
+5 |     rows: std::collections::HashMap<T>,
+  |           ^^^
+
+error[E0107]: struct takes at least 2 generic arguments but 1 generic argument was supplied
+ --> tests/ui/map_one_arg.rs:5:29
+  |
+5 |     rows: std::collections::HashMap<T>,
+  |                             ^^^^^^^ - supplied 1 generic argument
+  |                             |
+  |                             expected at least 2 generic arguments
+  |
+note: struct defined here, with at least 2 generic parameters: `K`, `V`
+ --> $RUST/std/src/collections/hash/map.rs
+  |
+  | pub struct HashMap<
+  |            ^^^^^^^
+  |     K,
+  |     -
+  |     V,
+  |     -
+help: add missing generic argument
+  |
+5 |     rows: std::collections::HashMap<T, V>,
+  |                                      +++

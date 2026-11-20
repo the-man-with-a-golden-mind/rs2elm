@@ -1,0 +1,5 @@
+error: map keys that contain a type parameter are not supported; the key must be String, found `T`
+ --> tests/ui/map_key.rs:6:11
+  |
+6 |     rows: HashMap<T, i32>,
+  |           ^^^^^^^

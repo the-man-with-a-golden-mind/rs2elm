@@ -1,0 +1,5 @@
+error: the Elm side has no Rust `Default` value
+ --> tests/ui/default_int.rs:7:5
+  |
+7 |     value: i32,
+  |     ^^^^^

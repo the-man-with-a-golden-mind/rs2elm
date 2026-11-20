@@ -1,0 +1,5 @@
+error: unknown rs2elm attribute
+ --> tests/ui/unknown_elm.rs:4:10
+  |
+4 | #[rs2elm(nope)]
+  |          ^^^^

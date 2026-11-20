@@ -1,0 +1,38 @@
+[package]
+name = "rs2elm"
+description = "Generate Elm bindings for your Rust types"
+readme = "README.md"
+keywords = ["elm", "bindings"]
+categories = ["development-tools::ffi", "web-programming"]
+
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[features]
+default = ["derive", "serde"]
+derive = ["rs2elm_derive", "rs2elm_derive/json", "rs2elm_derive/query"]
+serde = ["rs2elm_derive/serde"]
+
+[dependencies]
+rs2elm_derive = { workspace = true, optional = true }
+tracing = { workspace = true }
+
+# optional
+chrono = { version = "0.4.19", optional = true }
+time = { version = "0.3.47", optional = true, features = ["serde"] }
+uuid = { version = "1.1.2", optional = true }
+
+[dev-dependencies]
+chrono = { version = "0.4.19", features = ["serde"] }
+trybuild = "1"
+serde = { version = "1.0.136", features = ["derive", "rc"] }
+serde_json = { version = "1.0.78" }
+unescape = "0.1.0"
+uuid = { version = "1.1.2", features = ["serde"] }
+
+[package.metadata.docs.rs]
+all-features = true

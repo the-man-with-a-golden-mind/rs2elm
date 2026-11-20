@@ -1,0 +1,21 @@
+error: expected a generic type
+ --> tests/ui/option_bare.rs:7:12
+  |
+7 |     value: Option,
+  |            ^^^^^^
+
+error[E0107]: missing generics for enum `std::option::Option`
+ --> tests/ui/option_bare.rs:7:12
+  |
+7 |     value: Option,
+  |            ^^^^^^ expected 1 generic argument
+  |
+note: enum defined here, with 1 generic parameter: `T`
+ --> $RUST/core/src/option.rs
+  |
+  | pub enum Option<T> {
+  |          ^^^^^^ -
+help: add missing generic argument
+  |
+7 |     value: Option<T>,
+  |                  +++

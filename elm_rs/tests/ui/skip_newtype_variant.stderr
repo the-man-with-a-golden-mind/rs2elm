@@ -1,0 +1,5 @@
+error: cannot skip the only field of a newtype variant
+ --> tests/ui/skip_newtype_variant.rs:6:6
+  |
+6 |     V(#[serde(skip)] u8),
+  |      ^^^^^^^^^^^^^^^^^^^

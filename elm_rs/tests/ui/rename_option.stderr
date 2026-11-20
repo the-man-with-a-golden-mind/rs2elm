@@ -1,0 +1,11 @@
+error: malformed rename attribute, expected `rename(serialize = ..., deserialize = ...)`
+ --> tests/ui/rename_option.rs:6:20
+  |
+6 |     #[serde(rename(other = "x"))]
+  |                    ^^^^^
+
+error: unsupported serde rename option
+ --> tests/ui/rename_option.rs:6:20
+  |
+6 |     #[serde(rename(other = "x"))]
+  |                    ^^^^^^^^^^^

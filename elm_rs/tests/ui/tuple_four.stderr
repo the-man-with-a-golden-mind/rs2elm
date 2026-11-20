@@ -1,0 +1,5 @@
+error: tuples with a type parameter support at most 3 elements
+ --> tests/ui/tuple_four.rs:5:13
+  |
+5 |     values: (T, T, T, T),
+  |             ^^^^^^^^^^^^

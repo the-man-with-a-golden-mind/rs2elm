@@ -1,0 +1,5 @@
+error: `#[rs2elm(index)]` requires a list
+ --> tests/ui/index_on_int.rs:6:11
+  |
+6 |     page: i32,
+  |           ^^^

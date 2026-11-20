@@ -1,0 +1,5 @@
+error: Internally tagged newtype variants are not supported by serde_json
+ --> tests/ui/internal_newtype.rs:7:5
+  |
+7 |     N(i32),
+  |     ^

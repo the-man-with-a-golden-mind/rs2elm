@@ -1,0 +1,5 @@
+error: cannot derive ElmQuery for `PhantomData < u8 >` because this type has no query codec
+ --> tests/ui/query_phantom.rs:6:12
+  |
+6 |     ghost: PhantomData<u8>,
+  |            ^^^^^^^^^^^
